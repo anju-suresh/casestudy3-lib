@@ -1,0 +1,86 @@
+.signup-content input:focus ~ label,
+.signup-content input:valid ~ label{
+  transform: translateY(-38px);
+  background: white;
+  font-size: 14px;
+  color: #1DA1F2;
+}
+.signup-content .form-groups {
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 39px;
+  background-color: white;
+}
+
+.signup-content .loginhere-link{
+  margin-top: 3px;
+  background-color: white;
+}
+ .signup-content .fa-eye, .signup-content .fa-eye-slash{
+  cursor: pointer;
+  right: 10px;
+  user-select: none;
+  background-color: white;
+  
+
+}
+#pass-statuss{
+  right: 10%;
+  top: 64%;
+  float: right;
+}
+.signup-content .form-groups input{
+    height: auto;
+    width: 100%;
+    border: 1px solid silver;
+    padding-left: 15px;
+    outline: none;
+    font-size: 19px;
+    transition: .4s;
+    background-color: white;
+}
+.signup-content input:focus{
+    border: 2px solid #1DA1F2;
+  }
+  .signup-content .form-groups label, .signup-content .fa-eye, .signup-content .fa-eye-slash{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+  }
+  .signup-content .form-groups label{
+    left: 15px;
+    pointer-events: none;
+    color: grey;
+    font-size: 18px;
+    transition: .4s;
+    background-color: white;
+  }
+  .signup-content, .signup-form, .form-title, .loginhere{
+      background-color: white;
+  }
+  .form-title{
+    margin-top: 0px;
+  }
+  .signup-content P{background-color: white;}
+  #delete{
+    float: right;
+    position: relative;
+    top:0px;
+    margin-top: 0px;
+    right: 10%;
+    padding: 0px;
+    /* margin-right:60; */
+  }
+  #delete:hover{
+    color: red;
+  }
+  .a{
+    background-color: white;
+  }
+  #edit:hover{
+    color: red;
+  }
+  
