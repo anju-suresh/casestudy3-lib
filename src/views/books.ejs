@@ -55,8 +55,7 @@
                         <%for(let i=0;i<books.length;i++){%>
                         <tr class="w3-animate-right">
                          
-                            <td><img  id = "imgdup" src="/upload/<%=books[i].contentType%>;base64, 
-                              <%=books[i].image.buffer%>;base64">" alt="first"></td>
+                            <td><img  id = "imgdup" src="/upload/<%=books[i].image%>" alt="first"></td>
                             <td>
                               <h3><%=books[i].title%></h3> 
                                 <div class="w3-panel w3-round-xlarge">

@@ -24,15 +24,11 @@ adminRouter.get("/add",(req,res)=>{
     
 });
 adminRouter.post('/add',upload.single('img'),(req,res)=>{
-    var newImg = fs.readFileSync(req.file.path);
-    var encImg = newImg.toString('base64');
     var item={
         title: req.body.title,
         author: req.body.author,
         gener: req.body.gen,
-        contentType: req.file.mimetype,
-        size: req.file.size,
-        image: Buffer(encImg, 'base64')
+        image: req.file.filename
       }
 
     var book=bookData(item);
@@ -40,13 +36,13 @@ adminRouter.post('/add',upload.single('img'),(req,res)=>{
     res.redirect("/books");
 
 });
-adminRouter.post('/addauthor',(req,res)=>{
+adminRouter.post('/addauthor',upload.single('img'),(req,res)=>{
     
     var item={
     author: req.body.author,
     title: req.body.title,
     gener: req.body.gen,
-    image: req.body.img
+    image: req.file.filename
     }
     var author=authorData(item);
     author.save();
@@ -84,13 +80,13 @@ adminRouter.get('/editauthor/:id',(req,res)=>{
         ,author});  
     });
 });
-adminRouter.post('/update',(req,res)=>{
+adminRouter.post('/update',upload.single('image'),(req,res)=>{
      let id=req.body.id;
      console.log(id);
     let title= req.body.title;
     let author= req.body.author;
     let gener= req.body.gener;
-    let image= req.body.image;
+    let image= req.file.filename;
   
     if(image.length==0){
         var query= {_id: id};
@@ -123,13 +119,13 @@ adminRouter.post('/update',(req,res)=>{
          res.redirect("/books");  
     }
 });
-adminRouter.post('/authorupdate',(req,res)=>{
+adminRouter.post('/authorupdate',upload.single('image'),(req,res)=>{
     let id=req.body.id;
     console.log(id);
    let title= req.body.title;
    let author= req.body.author;
    let gener= req.body.gener;
-   let image= req.body.image;
+   let image= req.file.filename;
 
    if(image.length==0){
        var query= {_id: id};
