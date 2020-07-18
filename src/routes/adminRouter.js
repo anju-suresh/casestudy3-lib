@@ -5,7 +5,7 @@ path=require('path')
 fs = require('fs-extra')
 multer = require('multer')
 util = require('util')
-path=require('path')
+
 upload = multer({limits: {fileSize: 2000000 },dest:'public/upload'}) 
 const bookData= require('../model/bookData')
 const authorData= require('../model/authorData')

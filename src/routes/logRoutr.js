@@ -4,7 +4,7 @@ const Authordata = require('../model/authorData');
 const signupdata=require("../model/signupdata");
 function router(nav){
 logRouter.get("/",(req,res)=>{
-    let errmsg="Enter Login Details"
+    let errmsg=" "
     res.render("login",
     {
         nav,
